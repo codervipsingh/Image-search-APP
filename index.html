@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Search API</title>
+    <script defer src="./script.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        h1{
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin: 40px 0 60px  0;
+        }
+        form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+body{
+           
+    background-color: #F9F9F9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+}
+
+#search-input{
+   width: 60%;
+  min-width: 400px;
+  padding: 10px 20px;
+  border: none;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  font-size: 18px;
+  color: black;
+
+}
+#btn{
+background-color: rgb(85, 225, 85);
+border: none;
+padding: 10px 20px;
+border-radius: 3px;
+color: #fff;
+font-size: 18px;
+cursor: pointer;
+margin-left: 10px;
+}
+
+#btn:hover{
+    background-color: green;
+}
+.search-results{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.search-result{
+    margin-bottom: 60px;
+    width: 30%;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.search-result img{
+    width: 100%;
+    height:200px;
+    object-fit: cover;
+    transition: opacity 0.2s ease-in-out;
+}
+.search-result:hover img{
+    opacity: 0.8;
+
+}
+
+.search-result a{
+    font-size: 20px;
+    text-transform:capitalize;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+#show{
+    background-color: rgb(82, 82, 233);
+    font-size: 18px;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    margin: 30px auto;
+    cursor: pointer;
+    display: none;
+}
+
+
+@media screen and(max-width :768px){
+    .search-result{
+        width: 45%;
+    }
+    .search-results{
+        padding: 20px;
+    }
+    
+}
+
+@media screen and(max-width :480px){
+    .search-result{
+        width: 100%;
+    }
+    
+}
+
+
+    </style>
+</head>
+<body>
+   <h1> Image Search APP</h1>
+
+    <form action="">
+        <input type="text" id='search-input' placeholder="Search for image">
+        <button id="btn">Search</button>
+    </form>
+    <div class="search-results">
+        <!-- <div class="search-result">
+            <img src="https://images.unsplash.com/photo-1628258334105-2a0b3d6efee1?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+          <a href="https://unsplash.com/s/photos/source">Search Me</a>
+        </div>
+
+        <div class="search-result">
+            <img src="https://images.unsplash.com/photo-1628258334105-2a0b3d6efee1?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+          <a href="https://unsplash.com/s/photos/source">Search Me</a>
+        </div>
+
+        <div class="search-result">
+            <img src="https://images.unsplash.com/photo-1628258334105-2a0b3d6efee1?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+          <a href="https://unsplash.com/s/photos/source">Search Me</a>
+        </div> -->
+
+       
+
+
+    </div>
+    <button id="show">Show more</button>
+   
+</body>
+</html>
